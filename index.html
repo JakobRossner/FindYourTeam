@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Team</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  <body class="gradient-background">
+
+  <!-- Container for the Find Your Team component -->
+  <div id="team-container">
+    <div id="prompt">
+      <h1>🕵️‍♂️ ✨ Find Your Team! 🎉🤗</h1>
+      <input type="text" id="name-input" placeholder="Enter your name" />
+      <button id="submit-btn" onclick="start()">Submit</button>
+    </div>
+
+
+    <div id="choice" style="display:none;">
+      <h2 class="section-heading">🔀 Choose Your Way of Randomizing</h2>
+      <button onclick="playAnimation('airplane')">Paper Airplane ✈️</button>
+      <button onclick="playAnimation('cocktail')">Cocktail 🍸</button>
+      <button onclick="playAnimation('ant')">Ant 🐜</button>
+    </div>
+
+    <div id="animation" style="display:none;">
+      <!-- This will be filled with the chosen animation -->
+    </div>
+
+    <div id="result" style="display:none;">
+  <div class="heading-container">
+    <img src="https://jakobrossner.github.io/FindYourTeam/HighFivePeople.svg" alt="High Five" id="high-five-image" />
+    <h2 class="section-heading">You are paired up with:</h2>
+  </div>
+  <div id="result-group"></div>
+</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
