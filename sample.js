@@ -216,12 +216,22 @@ const nameToGroupIndex = {
   'Amy Natt': 20,
 };
 
-function getGroupByName(name) {
-  const groupIndex = nameToGroupIndex[name];
-  if (groupIndex !== undefined) {
-    return groups[groupIndex];
+function getGroupByName(inputName) {
+  if (!inputName) return null;
+  
+  const lowerInputName = inputName.toLowerCase().trim(); // Convert input to lowercase
+
+  // Find the first matching name in `nameToGroupIndex` keys that includes the input
+  const matchedName = Object.keys(nameToGroupIndex).find(key =>
+    key.toLowerCase().includes(lowerInputName) // Partial, case-insensitive match
+  );
+
+  // If a match is found, return the corresponding group
+  if (matchedName) {
+    const groupIndex = nameToGroupIndex[matchedName];
+    return groups[groupIndex]; // Return the group array for the matched name
   } else {
-    return null; // Participant not found
+    return null; // No match found
   }
 }
 
