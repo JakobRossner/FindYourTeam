@@ -69,7 +69,7 @@ function playAnimation(type) {
     animationContainer.style.display = "block";
   } else  if (type === "cocktail") {
     const drinks = ['🍸', '🍷', '🍾', '🍺', '🍻', '🥂', '🧉', '🧋']; // Drink emojis array
-    const totalDrinks = 100; // Number of drinks to display
+    const totalDrinks = 47; // Number of drinks to display
 
     // Generate multiple drinks with random sizes, positions, and animations
     for (let i = 0; i < totalDrinks; i++) {
