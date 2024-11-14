@@ -1,0 +1,387 @@
+.gradient-background {
+  background: linear-gradient(313deg,#ffffff,#c9e4ff,#f6f9ff);
+  background-size: 180% 180%;
+  animation: gradient-animation 11s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%; 
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.animate-airplane {
+  animation: airplaneFly 2s ease-in-out;
+}
+
+@keyframes airplaneFly {
+  from { transform: translateX(-100vw); }
+  to { transform: translateX(100vw); }
+}
+
+.animate-cocktail {
+  animation: shake 1s infinite;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Ant Container Styling */
+#animation {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between each ant */
+  justify-content: flex-start;
+  padding-left: 20px;
+  overflow: hidden; /* Hide ants once they reach the anthill */
+}
+
+/* Ant Animation */
+.animate-ant {
+  width: 30px; /* Adjust size as needed */
+  animation: antWalk 3s linear forwards; /* Ant walking animation */
+}
+
+@keyframes antWalk {
+  from { transform: translateX(-100px); } /* Start slightly off-screen */
+  to { transform: translateX(250px); } /* Adjust distance to reach anthill */
+}
+
+/* Anthill Styling */
+.anthill {
+  width: 150px;
+  margin-left: 20px;
+}
+
+
+
+#name-input {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px 15px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 8px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: #333;
+  background-color: #f3f4f6;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+#name-input:focus {
+  background-color: #e7e8ea;
+}
+
+/* Styling for the submit button */
+#submit-btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #0a84ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+  background-color: #0a6fcc;
+}
+
+#submit-btn:active {
+  background-color: #094e99;
+  transform: scale(0.98);
+}
+
+#team-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #ffffffcc; /* Slightly transparent white background */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* General Section Heading Styling */
+.section-heading {
+  font-size: 1.5rem;
+  color: #0a84ff;
+  margin-bottom: 20px;
+}
+
+/* Flat Button Style for the Animation Choices */
+#choice button {
+  padding: 12px 20px;
+  font-size: 2rem;
+  color: white;
+  background-color: #0a84ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+#choice button:hover {
+  background-color: #0a6fcc;
+}
+
+#choice button:active {
+  background-color: #094e99;
+  transform: scale(0.98);
+}
+
+/* Updated Styling for the Final Result Spheres */
+#result-group {
+  display: flex;
+  justify-content: center;
+  gap: 80px; /* Increase space between circles */
+  margin-top: 40px;
+}
+
+.result-sphere {
+  width: 140px; /* Adjust size as needed */
+  height: 140px; /* Adjust size as needed */
+  display: flex;
+  flex-direction: column; /* Stack name and team vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  border-radius: 50%;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Hover effect for spheres */
+.result-sphere:hover {
+  transform: scale(1.1);
+}
+
+/* Styling for Name and Team inside Result Spheres */
+.result-sphere .name {
+  font-size: 1.47rem; /* Adjust font size as needed */
+}
+
+.result-sphere .team {
+  font-size: 1.17rem; /* Smaller font for team name */
+  color: #e0e0e0; /* Slightly lighter color for contrast */
+  margin-top: 4px; /* Adds space between name and team */
+}
+
+
+/* Color-Coding for Different Teams */
+.result-sphere.adult-team {
+  background-color: #ff4d4d; /* Red */
+}
+
+.result-sphere.cyp-team {
+  background-color: #4d79ff; /* Blue */
+}
+
+.result-sphere.mh-team {
+  background-color: #486856; /* Green */
+}
+
+.result-sphere.upla-team {
+  background-color: #ffae42; /* Orange */
+}
+
+.result-sphere.simulation-team {
+  background-color: #a64dff; /* Purple */
+}
+
+.result-sphere.unnamed-team {
+  background-color: #999; /* Gray */
+}
+
+/* Container to cover the whole screen for ant rain */
+#ant-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400vw;
+  height: 400vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Styling for each ant in the rain */
+.rain-ant {
+  position: absolute;
+  width: 60px;
+  animation: fall 3s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg); /* Start slightly off-screen */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg); /* Fall to the bottom of the screen */
+    opacity: 0;
+  }
+}
+
+#result {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Center everything horizontally */
+  gap: 20px; /* Space between result group and the image */
+}
+
+/* Flexbox for Heading and Image */
+.heading-container {
+  display: flex;
+  align-items: center; /* Vertically center image with text */
+  gap: 10px; /* Space between image and heading */
+  justify-content: center; /* Center the entire heading-container if needed */
+}
+
+#high-five-image {
+  width: 100px; /* Adjust size as needed */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animation for the Paper Plane Flying In */
+.animate-paper-plane {
+  width: 70px;
+  position: absolute;
+  left: -100px; /* Start off-screen to the left */
+  animation: airplaneFlyToPile 3s ease-in-out forwards; /* 3-second flight */
+}
+
+@keyframes airplaneFlyToPile {
+  from {
+    transform: translateX(0) rotate(0deg); /* Initial position */
+  }
+  to {
+    transform: translateX(900px) rotate(20deg); /* Adjust final position */
+  }
+}
+
+/* Styling for the Pile of Paper Planes */
+.paper-pile {
+  width: 170px; /* Adjust size of pile as needed */
+  position: relative;
+  right: 20px; /* Position on the right end */
+  bottom: 20px; /* Position near bottom */
+}
+
+/* Styling for Drink Emojis */
+.drink-emoji {
+  position: absolute;
+  opacity: 0;
+  animation: fadeInRotate 2s ease forwards, pulse 1.5s infinite ease-in-out;
+}
+
+/* Fade in with rotation */
+@keyframes fadeInRotate {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+/* Pulsating Effect */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Slightly enlarges */
+  }
+}
+
+/* Slow Pulsating Effect for Name Circles */
+.result-sphere {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  margin-bottom: 40px;
+  animation: slowPulse 3s ease-in-out infinite;
+  /* The delay is dynamically added via JavaScript */
+}
+
+/* Pulsating Animation Keyframes */
+@keyframes slowPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Styling for Emoji above the name */
+.result-sphere .emoji {
+  font-size: 1.2rem; /* Larger size for the emoji */
+  margin-bottom: 4px; /* Space between emoji and name */
+}
+
+.result-sphere .name {
+  font-size: 0.9rem;
+}
+
+.result-sphere .team {
+  font-size: 0.7rem;
+  color: #e0e0e0;
+  margin-top: 4px;
+}
+
+/* Name and Team Styling inside Result Spheres */
+.result-sphere .name {
+  font-size: 0.9rem; /* Adjust font size as needed */
+}
+
+.result-sphere .team {
+  font-size: 0.7rem;
+  color: #e0e0e0;
+  margin-top: 4px;
+}
