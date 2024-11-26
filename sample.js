@@ -90,6 +90,8 @@ const groups = [
     { name: 'Alex Hull', team: 'CYP Team' },
     { name: 'Tanya Andrewes', team: 'Adult Team' },
     { name: 'Bernice Law', team: 'Adult Team' },
+    { name: 'Sasha Bryan', team: 'MH Team' },
+    
   ],
   // Group 16
   [
@@ -190,6 +192,7 @@ const nameToGroupIndex = {
   'Alex Hull': 14,
   'Tanya Andrewes': 14,
   'Bernice Law': 14,
+  'Sasha Bryan': 14,
   // Group 16
   'Chantal Cox': 15,
   'Steve Ersser': 15,
