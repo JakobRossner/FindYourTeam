@@ -412,14 +412,3 @@ button {
   display: inline-block;
   letter-spacing: 1px;
 }
-
-/* Subtle underline for "Find Your Team!" */
-.prep-title::after {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 3px;
-  background-color: #0a84ff;
-  margin: 8px auto 0;
-  border-radius: 5px;
-}
