@@ -385,3 +385,27 @@ button {
   color: #e0e0e0;
   margin-top: 4px;
 }
+
+/* Styling for PREP Title */
+.prep-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff5733, #ffbd33, #33ff57);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 8px;
+  animation: titleGlow 1.5s infinite alternate ease-in-out;
+}
+
+/* Glow effect for PREP */
+@keyframes titleGlow {
+  0% {
+    text-shadow: 0px 0px 5px rgba(255, 87, 51, 0.8);
+  }
+  100% {
+    text-shadow: 0px 0px 15px rgba(255, 189, 51, 1);
+  }
+}
