@@ -224,10 +224,11 @@ const nameToGroupIndex = {
   'Kelly Hislop Lennie': 20,
   'Amy Natt': 20,
  // Group 22
-  'Steve Trenoweth': 21,
-  'Kelly Hislop Lennie': 21,
-  'Amy Natt': 21,
+  'Jonny Branney': 21,
+  'Veronica Izquierdo Manrique': 21,
+  'Janet James': 21,
 };
+
 
 function getGroupByName(inputName) {
   if (!inputName) return null;
