@@ -129,6 +129,12 @@ const groups = [
     { name: 'Kelly Hislop Lennie', team: 'Adult Team' },
     { name: 'Amy Natt', team: 'Simulation Team' },
   ],
+ // Group 22
+[
+  { name: 'Jonny Branney', team: 'Adult Team' },
+  { name: 'Veronica Izquierdo Manrique', team: 'Adult Team' },
+  { name: 'Janet James', team: 'Adult Team' }
+]
 ];
 
 const nameToGroupIndex = {
@@ -217,6 +223,10 @@ const nameToGroupIndex = {
   'Steve Trenoweth': 20,
   'Kelly Hislop Lennie': 20,
   'Amy Natt': 20,
+ // Group 22
+  'Steve Trenoweth': 21,
+  'Kelly Hislop Lennie': 21,
+  'Amy Natt': 21,
 };
 
 function getGroupByName(inputName) {
